@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{doctors.title}} | {{block.super}}{% endblock title %}
+
+{% block content %}
+    <div class="container marketing">
+      <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">{{ title }}</h2>
+            <h4>Стаж: {{ doctors.experience }}</h4>
+            <h4>Специализация: {{ doctors.specialization }}</h4>
+            <h4>Категория: {{ doctors.category }}</h4>
+          <p>{% autoescape off %}{{doctors.content|linebreaks}}{% endautoescape %}</p>
+        </div>
+        <div class="col-lg-5">
+          <img class="img-circle" src="{{ doctors.image.url }}" alt="Generic placeholder image" width="250" height="250">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+    </div>
+{% endblock content %}
