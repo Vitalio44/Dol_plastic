@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'redactor',
     'doctor',
+    'main_pages',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{page.title}} | {{block.super}}{% endblock title %}
+{% block content %}
+    <div class="container marketing">
+
+      <div class="row featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">{{ page.title }}</h2>
+          {% autoescape off %}{{page.content}}{% endautoescape %}
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+    </div><!-- /.container -->
+{% endblock content %}
