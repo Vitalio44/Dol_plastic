@@ -2,7 +2,7 @@
 
 Приложение разработано на python 3.6.1
 
-## Необходимые пакеты:
+## Необходимые пакеты pip:
 ### Pillow == 4.1.0
 ### django-bootstrap3 == 8.2.2
 ### django-wysiwyg-redactor == 0.5.1

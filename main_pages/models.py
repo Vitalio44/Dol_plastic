@@ -8,7 +8,7 @@ class Page(models.Model):
     slug = models.SlugField(unique=True)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True, verbose_name='Создано')
     menu_name = models.CharField(max_length=80, verbose_name='Название в меню')
-    menu_position = models.IntegerField(verbose_name='Позиция в меню', null=True, blank=True )
+    menu_position = models.IntegerField(verbose_name='Позиция в меню', null=True, blank=True, unique=True)
     content = RedactorField(verbose_name='Контент')
     keywords = models.CharField(max_length=1024, blank=True, null=True)
     description = models.CharField(max_length=1024, blank=True, null=True)
