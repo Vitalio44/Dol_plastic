@@ -1,18 +1,15 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
+{% load main_slider %}
 {% block content %}
+{% get_slide_list slide %}
     <div class="container marketing">
-
       <div class="row featurette">
-        <div class="col-md-7">
+        <div class="col-md-12">
           <h2 class="featurette-heading">Donec<span class="text-muted">metus auctor fringilla.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-lg-5">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="250" height="250">
-        </div>
       </div>
       <hr class="featurette-divider">
-
     </div>
 {% endblock content %}

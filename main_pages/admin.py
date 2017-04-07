@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page
+from main_pages.models import Page, Slide
 
 
 class PageAdmin(admin.ModelAdmin):
@@ -13,6 +13,17 @@ class PageAdmin(admin.ModelAdmin):
         model = Page
 
 
+class SlideAdmin(admin.ModelAdmin):
+    list_display = ["title", "timestamp", "slide_position"]
+    list_display_links = ["title"]
+    list_filter = ["timestamp"]
+    search_fields = ["title"]
+
+    class Meta:
+        model = Slide
+
+
 
 admin.site.register(Page, PageAdmin)
+admin.site.register(Slide, SlideAdmin)
 
