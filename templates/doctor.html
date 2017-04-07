@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{%block keywords %}{{ doctors.keywords }}{% endblock keywords %}
+{%block description %}{{ doctors.description }}{% endblock description %}
 {% block title %}{{doctors.title}} | {{block.super}}{% endblock title %}
 
 {% block content %}

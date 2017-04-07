@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{%block keywords %}{{ page.keywords }}{% endblock keywords %}
+{%block description %}{{ page.description }}{% endblock description %}
 {% block title %}{{page.title}} | {{block.super}}{% endblock title %}
 {% block content %}
     <div class="container marketing">
