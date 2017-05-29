@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from redactor.fields import RedactorField
 
+
 class Page(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
     slug = models.SlugField(unique=True)
@@ -17,7 +18,7 @@ class Page(models.Model):
         verbose_name = 'Сраницу'
         verbose_name_plural = 'Страницы'
 
-    def __str__(self): # For Python 2, use __unicode__ too
+    def __str__(self):  # For Python 2, use __unicode__ too
         return self.slug
 
 
@@ -34,3 +35,16 @@ class Slide(models.Model):
 
     def __str__(self):  # For Python 2, use __unicode__ too
         return self.title
+
+
+class MainMenu(models.Model):
+    menu_name = models.CharField(max_length=128, verbose_name='Имя в меню')
+    url = models.URLField(verbose_name='Ссылка настраницу')
+    menu_position = models.IntegerField(verbose_name='Позиция в меню', unique=True)
+
+    class Meta:
+        verbose_name = 'Меню'
+        verbose_name_plural = 'Меню'
+
+    def __str__(self):  # For Python 2, use __unicode__ too
+        return self.menu_name

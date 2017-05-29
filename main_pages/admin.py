@@ -1,5 +1,5 @@
 from django.contrib import admin
-from main_pages.models import Page, Slide
+from main_pages.models import Page, Slide, MainMenu
 
 
 class PageAdmin(admin.ModelAdmin):
@@ -23,7 +23,16 @@ class SlideAdmin(admin.ModelAdmin):
         model = Slide
 
 
+class MainMenuAdmin(admin.ModelAdmin):
+    list_display = ["menu_name", "menu_position"]
+    list_display_links = ["menu_name"]
+
+    class Meta:
+        model = Slide
+
+
 
 admin.site.register(Page, PageAdmin)
 admin.site.register(Slide, SlideAdmin)
+admin.site.register(MainMenu, MainMenuAdmin)
 

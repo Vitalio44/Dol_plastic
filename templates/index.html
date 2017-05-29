@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load main_slider %}
+
 {% block content %}
-{% get_slide_list slide %}
+    {% get_slide_list slide %}
     <div class="container marketing">
       <div class="row featurette">
         <div class="col-md-12">
@@ -11,5 +12,17 @@
         </div>
       </div>
       <hr class="featurette-divider">
+    <h2>Вывод врачей по спискам</h2>
+
+    {% for special in special_list %}
+        <h3>{{ special.name }}</h3>
+        <ul>
+        {% for d in doctors_list %}
+            <li><a href="{% url 'doctor_detail' d.slug %}">{{ d.title|title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
     </div>
+
 {% endblock content %}

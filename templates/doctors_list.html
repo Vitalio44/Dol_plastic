@@ -1,0 +1,15 @@
+<h2>Вывод врачей по спискам</h2>
+{% for s in spec_list %}
+    <h3>{{ s.name }}</h3>
+
+        <ul>
+        {% for d in doctors_list %}
+            <li><a href="{% url 'doctor_detail' d.slug %}">{{ d.title|title }}</a></li>
+        {% endfor %}
+        </ul>
+
+{% endfor %}
+
+
+
+
