@@ -1,0 +1,16 @@
+appdirs==1.4.3
+Authomatic==0.1.0.post1
+Django==1.11
+django-bootstrap3==8.2.2
+django-crispy-forms==1.6.1
+django-mptt==0.8.7
+django-treenav==1.1.0
+django-wysiwyg-redactor==0.5.1
+olefile==0.44
+packaging==16.8
+Pillow==4.1.1
+pyparsing==2.2.0
+pytz==2017.2
+six==1.10.0
+virtualenv==15.1.0
+virtualenvwrapper-win==1.2.1
